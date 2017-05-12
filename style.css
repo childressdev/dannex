@@ -220,13 +220,16 @@ nav.navbar{
   background-repeat:no-repeat;
   background-size:cover;
 }
+
+#remodel .container-sm-height{
+  margin-top:-325px;
+  border-spacing:15px;
+}
 #remodel .cards>.col-sm-4{
   background-color:#e3d9ca;
-  border-left:7.5px solid #fff;
-  border-right:7.5px solid #fff;
 }
 #remodel .remodel-card{
-  padding-bottom:50px;
+  padding-bottom:90px;
 }
 #remodel .remodel-card>.btn-big{
   position:absolute;
@@ -250,6 +253,7 @@ nav.navbar{
   font-size:24px;
   font-family:Montserrat, sans-serif;
   font-weight:700;
+  margin-top:20px;
 }
 
 
@@ -279,6 +283,18 @@ nav.navbar{
   .masthead .logo-full>img{
     display:inline;
     margin-left:15px;
+  }
+  #remodel .cards>.col-sm-4{
+    max-width:330px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  #remodel .remodel-card{
+    margin-top:40px;
+    padding-top:20px;
+  }
+  #remodel .remodel-card>h2{
+    margin-top:0px;
   }
 }
 @media (min-width:768px){
