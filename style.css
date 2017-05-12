@@ -126,7 +126,7 @@ nav.navbar{
   color:#fff;
   padding:25px 15px;
 }
-.hp-hero .header-background>h2{
+.hp-hero .caption h2{
   color:#fff;
   font-size:60px;
   font-family:Montserrat, sans-serif;
@@ -256,6 +256,183 @@ nav.navbar{
   margin-top:20px;
 }
 
+.project-list{
+  padding-bottom:80px;
+}
+.project-list h1{
+  font-size:60px;
+  text-align:center;
+  font-family:Montserrat, sans-serif;
+  font-weight:700;
+  max-width:650px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.project-card{
+  margin-top:40px;
+}
+.project-card-caption{
+  max-width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.project-card-caption>h2{
+  font-size:24px;
+  font-family:Montserrat, sans-serif;
+  font-weight:700;
+  text-align:left;
+}
+.project-card-caption>p{
+  text-align:left;
+}
+.project-card-caption>.btn-clear{
+  border-color:#0a3542;
+  color:#7895a4;
+  padding:10px 50px;
+  margin-top:20px;
+}
+.project-card-caption>.btn-clear:hover,
+.project-card-caption>.btn-clear:focus{
+  color:#0a3542;
+  text-decoration:none;
+}
+
+.testimonial{
+  border-top: 10px solid #7895a4;
+  border-bottom: 10px solid #7895a4;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.testimonial .caption>p{
+  margin-top:20px;
+  font-size:30px;
+  font-family:Montserrat, sans-serif;
+  font-weight:700;
+}
+
+.vendor-list h1{
+  font-size:60px;
+  font-family:Montserrat, sans-serif;
+  font-weight:700;
+  text-align:center;
+}
+.vendors{
+  list-style:none;
+  padding-left:0;
+  text-align:center;
+}
+.vendors>li{
+  display:inline-block;
+  padding:10px;
+  vertical-align:middle;
+}
+
+#getStarted{
+  height:410px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#getStarted .container{
+  height:100%;
+}
+#getStarted .caption>h1{
+  font-size:60px;
+  font-family:Montserrat, sans-serif;
+  font-weight:700;
+  text-align:center;
+  color:#fff;
+}
+#getStarted .caption>.btn-clear{
+  margin-top:40px;
+  font-size:24px;
+  font-family:Domine, serif;
+  font-weight:400;
+  padding:10px 50px;
+  background-color:transparent;
+  -webkit-transition:background-color .3s ease;
+  transition:background-color .3s ease;
+}
+#getStarted .caption>.btn-clear:hover,
+#getStarted .caption>.btn-clear:focus{
+  color:#fff;
+  text-decoration:none;
+  background-color:rgba(255,255,255,.3);
+}
+
+footer{
+  background-color:#3f4446;
+  color:#fff;
+  padding-top:25px;
+  padding-bottom:80px;
+  text-align:center;
+}
+footer .footer-nav{
+  list-style:none;
+  padding-left:0;
+}
+footer .footer-nav>li{
+  display:inline-block;
+  padding:10px;
+}
+footer .footer-nav>li>a{
+  font-size:14px;
+  color:#fff;
+}
+footer .footer-nav>li>a:hover,
+footer .footer-nav>li>a:focus{
+  color:#fff;
+  text-decoration:underline;
+}
+footer .footer-nav-info hr{
+  max-width:425px;
+  border-color:#918f88;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0;
+}
+footer .footer-nav-info p{
+  font-size:14px;
+}
+footer .childress{
+  font-size:12px;
+  margin-top:30px;
+}
+footer .childress a{
+  color:#e3d9ca;
+}
+footer .childress a:hover,
+footer .childress a:focus{
+  color:#fff;
+  text-decoration:underline;
+}
+footer .social{
+  text-align:right;
+}
+footer .social>a{
+  display:inline-block;
+  height:44px;
+  width:44px;
+  background-image:url(images/social-sprites.png);
+  background-repeat:no-repeat;
+}
+footer .social>a.facebook{
+  background-position:0 0;
+}
+footer .social>a.pinterest{
+  background-position:-50px 0px;
+}
+footer .social>a.angies-list{
+  background-position:-100px 0px;
+}
+footer .social>a.houzz{
+  background-position:-148px 0px;
+}
+footer .social>a.bbb{
+  background-position:-191px 0px;
+}
+
 
 @media (max-width:767px){
   .masthead{
@@ -284,6 +461,15 @@ nav.navbar{
     display:inline;
     margin-left:15px;
   }
+  .hp-hero .caption h2{
+    font-size:40px;
+  }
+  #customBuilds{
+    height:auto;
+  }
+  .remodel-title>h1{
+    font-size:40px;
+  }
   #remodel .cards>.col-sm-4{
     max-width:330px;
     margin-left:auto;
@@ -295,6 +481,29 @@ nav.navbar{
   }
   #remodel .remodel-card>h2{
     margin-top:0px;
+  }
+  .project-list h1{
+    font-size:40px;
+  }
+  .testimonial .caption>p{
+    font-size:22px;
+  }
+  .vendor-list h1{
+    font-size:40px;
+  }
+  #getStarted .caption>h1{
+    font-size:40px;
+  }
+  footer .social{
+    text-align:center;
+    margin-top:25px;
+  }
+  footer img.img-responsive{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  footer .footer-nav-info{
+    margin-top:15px;
   }
 }
 @media (min-width:768px){
