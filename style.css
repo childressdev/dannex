@@ -105,8 +105,9 @@ nav.navbar{
   background-repeat:no-repeat;
   background-size:cover;
   position:relative;
+  height:300px;
 }
-.hp-hero{
+.hero.hp-hero{
   height:90vh;
 }
 
@@ -121,17 +122,16 @@ nav.navbar{
   text-align:center;
 }
 
-.hp-hero .header-background{
+.hero .header-background{
   background-color:rgba(0,0,0,.4);
   color:#fff;
   padding:25px 15px;
 }
-.hp-hero .caption h2{
+.hero .caption h2{
   color:#fff;
   font-size:60px;
   font-family:Montserrat, sans-serif;
   font-weight:700;
-  text-transform:uppercase;
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
