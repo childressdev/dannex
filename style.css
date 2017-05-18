@@ -534,11 +534,19 @@ footer .social>a.bbb{
 .portfolio-gallery{
   padding-bottom:60px;
 }
-.gallery-opener,
-.service-link{
+.gallery-opener{
   height:400px;
   background-repeat:no-repeat;
   background-size: cover;
+  margin-left:-15px;
+  margin-right:-15px;
+}
+.service-link-wrapper{
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.service-link{
+  height:400px;
   margin-left:-15px;
   margin-right:-15px;
 }
@@ -559,6 +567,9 @@ footer .social>a.bbb{
   padding-left:15px;
   padding-right:65px;
   display:inline-block;
+}
+.service-link h1>a{
+  padding-right:15px;
 }
 .gallery-opener h1>.gallery-link:after{
   content:"";
@@ -629,7 +640,8 @@ footer .social>a.bbb{
 }
 .go-back>.btn-clear,
 .post-nav>.btn-clear,
-.service-intro>.btn-clear{
+.service-intro>.btn-clear,
+#portfolioLink .btn-clear{
   color:#000;
   border-color:#7895a4;
 }
@@ -638,7 +650,9 @@ footer .social>a.bbb{
 .post-nav>.btn-clear:hover,
 .post-nav>.btn-clear:focus,
 .service-intro>.btn-clear:hover,
-.service-intro>.btn-clear:focus{
+.service-intro>.btn-clear:focus,
+#portfolioLink .btn-clear:hover,
+#portfolioLink .btn-clear:focus{
   color:#7895a4;
   text-decoration:none;
 }
@@ -663,14 +677,31 @@ footer .social>a.bbb{
 }
 
 .service-intro{
+  padding-top:20px;
   padding-bottom:20px;
 }
 .service-intro>h3{
   margin-top:0;
 }
-#serviceList .container-fluid{
-  margin-left:-15px;
-  margin-right:-15px;
+#serviceList{
+  padding-bottom:40px;
+}
+
+#portfolioLink{
+  text-align:Center;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+#portfolioLink h2{
+  font-size:60px;
+  font-family:Montserrat, sans-serif;
+  font-weight:700;
+  max-width:650px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#portfolioLink .btn-clear{
+  margin-top:30px;
 }
 
 
@@ -811,6 +842,12 @@ footer .social>a.bbb{
   }
   #serviceList .col-sm-height{
     vertical-align:middle;
+  }
+  #serviceList .container-fluid{
+    margin-left:0px;
+    margin-right:0px;
+    padding-left:0px;
+    padding-right:1px;
   }
 }
 @media (min-width:768px) and (max-width:950px){
