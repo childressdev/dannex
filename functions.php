@@ -271,10 +271,10 @@ function dannex_create_post_type(){
     'capability_type' => 'post',
     'public' => true,
     'menu_position' => 5,
-    'query_var' => 'projects',
+    'query_var' => 'dannex_projects',
     'supports' => array('title', 'editor', 'custom_fields')
   );
-  register_post_type('projects', $project_args);
+  register_post_type('dannex_projects', $project_args);
 
   $services_labels = array(
     'name' => 'Services',
@@ -291,10 +291,10 @@ function dannex_create_post_type(){
     'capability_type' => 'post',
     'public' => true,
     'menu_position' => 5,
-    'query_var' => 'services',
+    'query_var' => 'dannex_services',
     'supports' => array('title', 'editor', 'custom_fields')
   );
-  register_post_type('services', $services_args);
+  register_post_type('dannex_services', $services_args);
 }
 
 if(function_exists('acf_add_options_page')){
@@ -305,4 +305,11 @@ if(function_exists('acf_add_options_page')){
     'capability' => 'edit_posts',
     'redirect' => false
   ));
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="styled-button"';
 }

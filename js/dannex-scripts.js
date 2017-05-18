@@ -7,4 +7,9 @@ $(document).ready(function($){
       $('nav.navbar').removeClass('navbar-mini');
     }
   });
+
+  $('.go-back>a').on('click', function(e){
+    e.preventDefault();
+    history.go(-1);
+  });
 });

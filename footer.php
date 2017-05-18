@@ -52,7 +52,7 @@
                 <li><a href="<?php echo home_url('contact'); ?>">Contact</a></li>
               </ul>
               <hr />
-              <p><?php the_field('email', 'option'); ?> &nbsp;&middot;&nbsp; <?php the_field('phone', 'option'); ?><br />&copy;<?php echo date('Y'); ?> Dannex Construction<br /><?php the_field('street_address', 'option'); ?></p>
+              <p><?php the_field('email', 'option'); ?> &nbsp;&middot;&nbsp; <?php the_field('phone', 'option'); ?><br />&copy;<?php echo date('Y'); ?> Dannex Construction<br /><?php the_field('street_address', 'option') . ' ' . the_field('city_state_zip'); ?></p>
             </div>
           </div>
           <div class="col-sm-3">

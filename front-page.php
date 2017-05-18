@@ -82,7 +82,7 @@
     <div class="container">
       <h1><?php the_field('current_projects_title'); ?></h1>
       <?php
-        $recent_projects = new WP_Query(array('post_type' => 'projects', 'posts_per_page' => 3, 'post_status', 'publish'));
+        $recent_projects = new WP_Query(array('post_type' => 'dannex_projects', 'posts_per_page' => 3, 'post_status', 'publish'));
         if($recent_projects->have_posts()): ?>
           <div class="row">
             <?php while($recent_projects->have_posts()): $recent_projects->the_post(); ?>
