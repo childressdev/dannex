@@ -11,8 +11,8 @@
         <hr />
         <?php the_content(); ?>
       <div class="post-nav">
-        <a href="#" class="btn-clear" rel="prev">Prev Project</a>
-        <a href="#" class="btn-clear" rel="next">Next Project</a>
+        <?php previous_post_link('%link', 'Prev Project'); ?>
+        <?php next_post_link('%link', 'Next Project'); ?>
       </div>
     </section>
   </div>
