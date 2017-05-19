@@ -1,0 +1,27 @@
+<div class="contact-form">
+  <h4>Send Us Your Query</h4>
+  <div class="form-group">
+    <label for="fname" class="sr-only">First Name</label>
+    [text* fname id:fname class:form-control class:input-lg placeholder "First Name*"]
+  </div>
+  <div class="form-group">
+    <label for="lname" class="sr-only">Last Name</label>
+    [text* lname id:lname class:form-control class:input-lg placeholder "Last Name*"]
+  </div>
+  <div class="form-group">
+    <label for="email" class="sr-only">Email Address</label>
+    [email* email id:email class:form-control class:input-lg placeholder "Email Address*"]
+  </div>
+  <div class="form-group">
+    <label for="phone" class="sr-only">Phone Number</label>
+    [tel* phone id:phone class:form-control class:input-lg placeholder "Phone Number*"]
+  </div>
+  <div class="form-group">
+    <label for="message" class="sr-only">Message</label>
+    [textarea message x4 id:message class:form-control class:input-lg placeholder "Message"]
+  </div>
+  <div class="form-group">
+    [submit class:btn class:btn-lg class:btn-submit "Send"]
+    <span>*Required Field</span>
+  </div>
+</div>
