@@ -25,6 +25,14 @@ function dannex_scripts(){
     true
   );
     
+	wp_register_script(
+		'lightbox',
+		get_template_directory_uri() . '/js/lightbox.min.js',
+		array('jquery'),
+		'',
+		true
+	);
+
   wp_register_script(
     'dannex-scripts', 
     get_template_directory_uri() . '/js/dannex-scripts.js', 
@@ -34,6 +42,7 @@ function dannex_scripts(){
   );
   
   wp_enqueue_script('bootstrap-script');
+	wp_enqueue_script('lightbox');
   wp_enqueue_script('dannex-scripts');  
 }
 
@@ -41,10 +50,12 @@ add_action('wp_enqueue_scripts', 'dannex_styles');
 function dannex_styles(){
   wp_register_style('bootstrap-css', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
   wp_register_style('google-fonts', '//fonts.googleapis.com/css?family=Domine:400,700|Montserrat:300,400,700');
+	wp_register_style('lightbox-css', '/css/lightbox.min.css');
   wp_register_style('dannex', get_template_directory_uri() . '/style.css');
   
   wp_enqueue_style('bootstrap-css');
   wp_enqueue_style('google-fonts');
+	wp_enqueue_style('lightbox-css');
   wp_enqueue_style('dannex');
 }
 
@@ -295,6 +306,26 @@ function dannex_create_post_type(){
     'supports' => array('title', 'editor', 'custom_fields')
   );
   register_post_type('dannex_services', $services_args);
+
+	$portfolios_labels = array(
+		'name' => 'Portfolios',
+    'singular_name' => 'Portfolio',
+    'menu_name' => 'Portfolios',
+    'add_new_item' => 'Add Portfolio',
+    'search_items' => 'Search Portfolios',
+    'edit_items' => 'Edit Portfolios',
+    'new_items' => 'New Portfolios',
+    'not_found' => 'No Portfolio Found'
+	);
+  $portfolios_args = array(
+    'labels' => $portfolios_labels,
+    'capability_type' => 'post',
+    'public' => true,
+    'menu_position' => 5,
+    'query_var' => 'dannex_portfolios',
+    'supports' => array('title', 'editor', 'custom_fields')
+  );
+  register_post_type('dannex_portfolios', $portfolios_args);
 }
 
 if(function_exists('acf_add_options_page')){
