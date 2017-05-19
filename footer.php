@@ -1,5 +1,5 @@
     <?php
-      $most_recent_project = new WP_Query(array('post_type' => 'projects', 'posts_per_page' => 1, 'post_status' => 'publish'));
+      $most_recent_project = new WP_Query(array('post_type' => 'dannex_projects', 'posts_per_page' => 1, 'post_status' => 'publish'));
       if($most_recent_project->have_posts()): while($most_recent_project->have_posts()): $most_recent_project->the_post(); ?>
         <section class="testimonial">
           <div class="container">
@@ -20,19 +20,19 @@
           <ul class="vendors">
             <?php while(have_rows('vendors', 'option')): the_row(); ?>
               <li>
-                <a href="<?php the_sub_field('vendor_link'); ?>"><img src="<?php the_sub_field('vendor_logo'); ?>" class="img-responsive center-block" alt="<?php the_sub_field('vendor_name'); ?>" /></a>
+                <a href="<?php the_sub_field('vendor_link'); ?>" target="_blank"><img src="<?php the_sub_field('vendor_logo'); ?>" class="img-responsive center-block" alt="<?php the_sub_field('vendor_name'); ?>" /></a>
               </li>
             <?php endwhile; ?>
          </ul>
         </div>
       </section>
     <?php endif; ?>
-    <section id="getStarted" style="background-image:url(<?php echo get_field('get_started_background_image', 'option') ? get_field('get_started_background_image', 'option') : get_stylesheet_directory_uri() . '/images/samples-with-gradient.jpg'; ?>);">
+    <section id="getStarted" style="background-image:url(<?php echo get_field('get_started_background_image', 'option') ? get_field('get_started_background_image', 'option') : get_stylesheet_directory_uri() . '/images/samples-with-gradient.jpg'; ?>); <?php the_field('get_started_background_image_css', 'option'); ?>">
       <div class="container">
         <div class="caption-wrapper">
           <div class="caption">
-            <h1><?php the_field('get_started_title'); ?></h1>
-            <a href="<?php the_field('get_started_link'); ?>" class="btn-clear"><?php the_field('get_started_link_text'); ?></a>
+            <h1><?php the_field('get_started_title', 'option'); ?></h1>
+            <a href="<?php the_field('get_started_link', 'option'); ?>" class="btn-clear"><?php the_field('get_started_link_text', 'option'); ?></a>
           </div>
         </div>
       </div>

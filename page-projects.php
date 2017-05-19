@@ -14,7 +14,7 @@
           if($projects->have_posts()): $i=0; while($projects->have_posts()): $projects->the_post(); ?>
             <div class="col-sm-4">
               <div class="project-card">
-                <img src="<?php the_field('project_featured_image'); ?>" class="img-responsive center-block" alt="" />
+                <img src="<?php echo get_field('project_featured_image') ? get_field('project_featured_image') : get_stylesheet_directory_uri() . '/images/house-stone-3-car-garage_325.jpg'; ?>" class="img-responsive center-block" alt="" />
                 <div class="project-card-caption">
                   <h2><?php the_title(); ?></h2>
                   <p><?php the_field('project_short_description'); ?></p>
@@ -22,8 +22,9 @@
                 </div>
               </div>
             </div>
-          <?php $i++; endwhile; wp_pagenavi(array('query' => $projects)); endif; ?>
+          <?php $i++; endwhile; endif; ?>
       </div>
+      <?php  wp_pagenavi(array('query' => $projects)); ?>
     </section>
   </div>
 </main>

@@ -14,7 +14,13 @@
           <?php echo do_shortcode(get_field('contact_form_shortcode')); ?>
         </div>
       </div>
-      <img src="images/google-map-placeholder.jpg" class="img-responsive center-block" style="margin-top:40px;" alt="" />
+      <?php 
+        $location = get_field('location', 'option');
+        if(!empty($location)): ?>
+         <div class="acf-map">
+           <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+         </div>
+      <?php endif; ?>
     </section>
   </div>
 </main>

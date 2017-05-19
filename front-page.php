@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <main id="main">
-  <section class="flourished-caption" style="background-image:url(<?php echo get_field('first_section_background_image') ? get_field('first_section_background_image') : get_stylesheet_directory_uri() . '/images/house-colonial-white-fence.jpg'; ?>);">
+  <section class="flourished-caption" style="background-image:url(<?php echo get_field('first_section_background_image') ? get_field('first_section_background_image') : get_stylesheet_directory_uri() . '/images/house-colonial-white-fence.jpg'; ?>); <?php the_field('fist_section_background_image_css'); ?>">
     <div class="container">
       <div class="caption-wrapper">
         <div class="caption">
@@ -34,7 +34,7 @@
       </div>
     </div>
   </section>
-  <section class="flourished-caption" style="background-image:url(<?php echo get_field('third_section_background_image') ? get_field('third_section_background_image') : get_stylesheet_directory_uri() . 'images/house-addition.jpg'; ?>);">
+  <section class="flourished-caption" style="background-image:url(<?php echo get_field('third_section_background_image') ? get_field('third_section_background_image') : get_stylesheet_directory_uri() . 'images/house-addition.jpg'; ?>); <?php the_field('third_section_background_image_css'); ?>">
     <div class="container">
       <div class="caption-wrapper">
         <div class="caption">
@@ -88,11 +88,11 @@
             <?php while($recent_projects->have_posts()): $recent_projects->the_post(); ?>
               <div class="col-sm-4">
                 <div class="project-card">
-                  <img src="images/house-stone-3-car-garage.jpg" class="img-responsive center-block" alt="" />
+                  <img src="<?php echo get_field('project_featured_image') ? get_field('project_featured_image') : get_stylesheet_directory_uri() . '/images/house-stone-3-car-garage_325.jpg'; ?>" class="img-responsive center-block" alt="" />
                   <div class="project-card-caption">
-                    <h2>House Name</h2>
-                    <p>Short description of project to go here to tell about the build and what was accomplished.</p>
-                    <a href="#" class="btn-clear">View Project</a>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php the_field('project_short_description'); ?></p>
+                    <a href="<?php the_permalink(); ?>" class="btn-clear">View Project</a>
                   </div>
                 </div>
               </div>
